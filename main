@@ -1,0 +1,228 @@
+//the following is modified code from https://github.com/DisasterofPuppets/25ButtonMacroKeyboard
+#include <Keypad.h>
+#include <Keyboard.h>
+
+int keypress = 20;
+const byte ROWS = 5;
+const byte COLS = 5;
+char hexaKeys[ROWS][COLS] = 
+{
+
+  {'0', '1', '2', '3', '4'},
+  {'5', '6', '7', '8', '9'},
+  {'A', 'B', 'C', 'D', 'E'},
+  {'F', 'G', 'H', 'I', 'J'},
+  {'K', 'L', 'M', 'N', 'O'},
+
+};
+byte rowPins[ROWS] = {10, 16, 14, 15, 18};
+byte colPins[COLS] = {9, 8, 7, 6, 5};
+
+
+Keypad customKeypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
+
+void setup() {
+
+  Serial.begin(9600);
+  Keyboard.begin();
+ }
+
+void loop() {
+   
+char customKey = customKeypad.getKey();
+  
+if (customKey) 
+  {
+     switch (customKey) 
+     {
+        case '0':
+
+            Keyboard.press(KEY_F13);
+            delay(keypress);
+            Keyboard.release(KEY_F13);
+            break;
+            
+        case '1':
+                           
+            Keyboard.press(KEY_F14);
+            delay(keypress);
+            Keyboard.release(KEY_F14);
+            break;   
+            
+        case '2':
+            
+            Keyboard.press(KEY_F15);
+            delay(keypress);
+            Keyboard.release(KEY_F15);
+            break;
+
+        case '3':
+
+            Keyboard.press(KEY_F16);
+            delay(keypress);
+            Keyboard.release(KEY_F16);
+            break;
+
+        case '4':
+
+            Keyboard.press(KEY_F17);
+            delay(keypress);
+            Keyboard.release(KEY_F17);
+            break;
+
+        case '5':
+          
+            Keyboard.press(KEY_F18);
+            delay(keypress);
+            Keyboard.release(KEY_F18);
+            break;
+
+        case '6':
+       
+            Keyboard.press(KEY_F19);
+            delay(keypress);
+            Keyboard.release(KEY_F19);
+            break;
+
+        case '7':
+
+            Keyboard.press(KEY_F20);
+            delay(keypress);
+            Keyboard.release(KEY_F20);
+            break;
+
+        case '8':
+
+            Keyboard.press(KEY_F21);
+            delay(keypress);
+            Keyboard.release(KEY_F21);
+            break;
+
+        case '9':
+           
+            Keyboard.press(KEY_F22);
+            delay(keypress);
+            Keyboard.release(KEY_F22);
+            break;
+
+        case 'A':
+                   
+            Keyboard.press(KEY_F23);
+            delay(keypress);
+            Keyboard.release(KEY_F23);
+            break;        
+
+        case 'B':
+        
+            Keyboard.press(KEY_F24);
+            delay(keypress);
+            Keyboard.release(KEY_F24);
+            break;   
+
+        case 'C':
+        
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F13);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;                       
+
+        case 'D':
+           
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F14);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;                                                                            
+
+        case 'E':
+                 
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F15);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;    
+
+        case 'F':
+
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F16);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;    
+
+        case 'G':
+
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F17);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;    
+
+        case 'H':
+
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F18);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;    
+
+        case 'I':
+
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F19);
+            delay(keypress);
+            Keyboard.releaseAll();
+
+            break;    
+
+        case 'J':
+                   
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F20);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;       
+
+        case 'K':
+        
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F21);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;  
+
+        case 'L':
+        
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F22);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;  
+
+        case 'M':
+        
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F23);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;  
+
+        case 'N':
+                 
+            Keyboard.press(KEY_RIGHT_SHIFT); 
+            Keyboard.press(KEY_F24);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;                                                                                                                       
+
+        case 'O':
+
+            Keyboard.press(KEY_RIGHT_ALT);
+            Keyboard.press(KEY_F24);
+            delay(keypress);
+            Keyboard.releaseAll();
+            break;                                                                                                                                   
+      }
+    }
+}

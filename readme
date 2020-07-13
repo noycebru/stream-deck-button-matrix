@@ -1,0 +1,8 @@
+This is a modifcation of this code https://github.com/DisasterofPuppets/25ButtonMacroKeyboard
+Disaster wrote button matrix code with the FastLED matrix and it has a lot of awesome animations! Please check his code out, or
+his stream https://www.twitch.tv/disasterofpuppets
+
+My button matrix doesn't have LEDs so I simplified the code a bit for my 25 button matrix.
+You can 3d print the button matrix here: https://cults3d.com/en/3d-model/various/noycemidi-a-mini-25-button-midi-player
+
+

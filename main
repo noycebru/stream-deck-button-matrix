@@ -2,7 +2,7 @@
 #include <Keypad.h>
 #include <Keyboard.h>
 
-int keypress = 20;
+int keypress = 100;
 const byte ROWS = 5;
 const byte COLS = 5;
 char hexaKeys[ROWS][COLS] = 
